@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,9 +47,40 @@ class _WeatherBodyState extends State<WeatherBody> {
 
   @override
   Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text("Weather App"),
+      ),
+      child: Center(
+        child: TestWidget(data: data),
+      ),
+    );
+  }
+}
+
+class TestWidget extends StatelessWidget {
+  Map<String, dynamic> data;
+  TestWidget({
+    required this.data,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     if (data.length == 0) {
-      return Text("Loading");
+      return Text(
+        "Loading...",
+        style: TextStyle(
+          color: Colors.black,
+          decoration: TextDecoration.none,
+        ),
+      );
     }
-    return Text(data['name']);
+    return Text(
+      data['name'],
+      style: TextStyle(
+        color: Colors.black,
+        decoration: TextDecoration.none,
+      ),
+    );
   }
 }
