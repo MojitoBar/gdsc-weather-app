@@ -59,10 +59,9 @@ class _WeatherBodyState extends State<WeatherBody> {
 }
 
 class TestWidget extends StatelessWidget {
-  Map<String, dynamic> data;
-  TestWidget({
-    required this.data,
-  });
+  final Map<String, dynamic> data;
+
+  const TestWidget({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
