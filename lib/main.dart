@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weather/data.dart';
 
 void main() {
 // Json data 받아오기
@@ -30,12 +31,12 @@ class WeatherBody extends StatefulWidget {
 }
 
 class _WeatherBodyState extends State<WeatherBody> {
-  Map<String, dynamic> data = {};
+  WeatherData? data = null;
   Future<void> getJson() async {
     final String response = await rootBundle.loadString('json/data.json');
     final data = await json.decode(response);
     setState(() {
-      this.data = data;
+      this.data = WeatherData.fromJson(data);
     });
   }
 
@@ -52,20 +53,20 @@ class _WeatherBodyState extends State<WeatherBody> {
         middle: Text("Weather App"),
       ),
       child: Center(
-        child: TestWidget(data: data),
+        child: LocationText(data: data),
       ),
     );
   }
 }
 
-class TestWidget extends StatelessWidget {
-  final Map<String, dynamic> data;
+class LocationText extends StatelessWidget {
+  final WeatherData? data;
 
-  const TestWidget({super.key, required this.data});
+  const LocationText({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
-    if (data.length == 0) {
+    if (data == null) {
       return Text(
         "Loading...",
         style: TextStyle(
@@ -74,12 +75,17 @@ class TestWidget extends StatelessWidget {
         ),
       );
     }
-    return Text(
-      data['name'],
-      style: TextStyle(
-        color: Colors.black,
-        decoration: TextDecoration.none,
-      ),
+    return Column(
+      children: [
+        Padding(padding: EdgeInsets.all(30)),
+        Text(
+          data!.name.toString(),
+          style: TextStyle(
+            color: Colors.black,
+            decoration: TextDecoration.none,
+          ),
+        ),
+      ],
     );
   }
 }
