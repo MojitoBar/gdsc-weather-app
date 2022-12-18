@@ -85,6 +85,14 @@ class LocationText extends StatelessWidget {
             decoration: TextDecoration.none,
           ),
         ),
+        Padding(padding: EdgeInsets.all(10)),
+        Text(
+          data!.wind!.speed.toString(),
+          style: TextStyle(
+            color: Colors.black,
+            decoration: TextDecoration.none,
+          ),
+        ),
       ],
     );
   }
