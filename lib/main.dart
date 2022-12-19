@@ -93,16 +93,29 @@ class LocationText extends StatelessWidget {
             decoration: TextDecoration.none,
           ),
         ),
-        Padding(padding: EdgeInsets.all(50)),
+        Padding(padding: EdgeInsets.all(70)),
         Image(
           image: AssetImage(
             convertWeathertImg(data!.weather!.first.main.toString()),
           ),
           width: 80,
         ),
+        Padding(padding: EdgeInsets.all(15)),
+        Text(
+          convertToCelsius(data!.main!.temp!),
+          style: TextStyle(
+            color: Color.fromARGB(255, 76, 76, 76),
+            fontSize: 45,
+            decoration: TextDecoration.none,
+          ),
+        ),
       ],
     );
   }
+}
+
+String convertToCelsius(double kelvin) {
+  return (kelvin - 273.15).toStringAsFixed(1) + "º";
 }
 
 String convertWeathertImg(String str) {
