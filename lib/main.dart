@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weather/WeatherIcon.dart';
 import 'package:weather/data.dart';
 
 void main() {
@@ -92,15 +93,18 @@ class LocationText extends StatelessWidget {
             decoration: TextDecoration.none,
           ),
         ),
-        Padding(padding: EdgeInsets.all(70)),
-        Text(
-          data!.wind!.speed.toString(),
-          style: TextStyle(
-            color: Colors.black,
-            decoration: TextDecoration.none,
+        Padding(padding: EdgeInsets.all(50)),
+        Image(
+          image: AssetImage(
+            convertWeathertImg(data!.weather!.first.main.toString()),
           ),
+          width: 80,
         ),
       ],
     );
   }
+}
+
+String convertWeathertImg(String str) {
+  return WeatherIcon[str]!;
 }
