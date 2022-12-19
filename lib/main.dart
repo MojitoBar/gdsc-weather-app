@@ -49,9 +49,6 @@ class _WeatherBodyState extends State<WeatherBody> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text("Weather App"),
-      ),
       child: Center(
         child: LocationText(data: data),
       ),
@@ -79,13 +76,23 @@ class LocationText extends StatelessWidget {
       children: [
         Padding(padding: EdgeInsets.all(30)),
         Text(
-          data!.name.toString(),
+          "${data!.name.toString()}, ${data!.sys!.country}",
           style: TextStyle(
             color: Colors.black,
+            fontSize: 19,
             decoration: TextDecoration.none,
           ),
         ),
-        Padding(padding: EdgeInsets.all(10)),
+        Padding(padding: EdgeInsets.all(3)),
+        Text(
+          data!.weather!.first.main.toString(),
+          style: TextStyle(
+            color: Color.fromARGB(255, 76, 76, 76),
+            fontSize: 14,
+            decoration: TextDecoration.none,
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(70)),
         Text(
           data!.wind!.speed.toString(),
           style: TextStyle(
