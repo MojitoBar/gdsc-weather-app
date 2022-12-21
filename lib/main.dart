@@ -123,7 +123,7 @@ class LocationText extends StatelessWidget {
           "Wind",
           style: TextStyle(
             color: Color.fromARGB(255, 76, 76, 76),
-            fontSize: 16,
+            fontSize: 13,
             decoration: TextDecoration.none,
           ),
         ),
@@ -133,14 +133,14 @@ class LocationText extends StatelessWidget {
           children: [
             Image(
               image: AssetImage("images/wind.png"),
-              width: 20,
+              width: 15,
             ),
             Padding(padding: EdgeInsets.all(5)),
             Text(
               data!.wind!.speed!.toStringAsFixed(0) + "m/s",
               style: TextStyle(
                 color: Color.fromARGB(255, 76, 76, 76),
-                fontSize: 16,
+                fontSize: 13,
                 decoration: TextDecoration.none,
               ),
             )
