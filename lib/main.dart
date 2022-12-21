@@ -86,7 +86,7 @@ class LocationText extends StatelessWidget {
         ),
         Padding(padding: EdgeInsets.all(3)),
         Text(
-          data!.weather!.first.main.toString(),
+          "Now",
           style: TextStyle(
             color: Color.fromARGB(255, 76, 76, 76),
             fontSize: 14,
@@ -98,16 +98,53 @@ class LocationText extends StatelessWidget {
           image: AssetImage(
             convertWeathertImg(data!.weather!.first.main.toString()),
           ),
-          width: 80,
+          width: 50,
         ),
         Padding(padding: EdgeInsets.all(15)),
         Text(
           convertToCelsius(data!.main!.temp!),
           style: TextStyle(
             color: Color.fromARGB(255, 76, 76, 76),
-            fontSize: 45,
+            fontSize: 60,
             decoration: TextDecoration.none,
           ),
+        ),
+        Padding(padding: EdgeInsets.all(15)),
+        Text(
+          data!.weather!.first.main.toString(),
+          style: TextStyle(
+            color: Color.fromARGB(255, 76, 76, 76),
+            fontSize: 16,
+            decoration: TextDecoration.none,
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(25)),
+        Text(
+          "Wind",
+          style: TextStyle(
+            color: Color.fromARGB(255, 76, 76, 76),
+            fontSize: 16,
+            decoration: TextDecoration.none,
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(5)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage("images/wind.png"),
+              width: 20,
+            ),
+            Padding(padding: EdgeInsets.all(5)),
+            Text(
+              data!.wind!.speed!.toStringAsFixed(0) + "m/s",
+              style: TextStyle(
+                color: Color.fromARGB(255, 76, 76, 76),
+                fontSize: 16,
+                decoration: TextDecoration.none,
+              ),
+            )
+          ],
         ),
       ],
     );
