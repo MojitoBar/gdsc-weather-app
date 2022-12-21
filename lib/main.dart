@@ -135,7 +135,7 @@ class LocationText extends StatelessWidget {
               image: AssetImage("images/wind.png"),
               width: 15,
             ),
-            Padding(padding: EdgeInsets.all(5)),
+            Padding(padding: EdgeInsets.all(3)),
             Text(
               data!.wind!.speed!.toStringAsFixed(0) + "m/s",
               style: TextStyle(
