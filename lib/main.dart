@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weather/WeatherBackgroundColor.dart';
 import 'package:weather/WeatherIcon.dart';
 import 'package:weather/data.dart';
 
@@ -49,21 +50,6 @@ class _WeatherBodyState extends State<WeatherBody> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      child: Center(
-        child: LocationText(data: data),
-      ),
-    );
-  }
-}
-
-class LocationText extends StatelessWidget {
-  final WeatherData? data;
-
-  const LocationText({super.key, required this.data});
-
-  @override
-  Widget build(BuildContext context) {
     if (data == null) {
       return Text(
         "Loading...",
@@ -73,6 +59,26 @@ class LocationText extends StatelessWidget {
         ),
       );
     }
+    return CupertinoPageScaffold(
+      backgroundColor: getColor(data!.weather!.first.main!),
+      child: Center(
+        child: LocationText(data: data),
+      ),
+    );
+  }
+}
+
+Color getColor(String weather) {
+  return WeatherBackgroundColor[weather]!;
+}
+
+class LocationText extends StatelessWidget {
+  final WeatherData? data;
+
+  const LocationText({super.key, required this.data});
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Padding(padding: EdgeInsets.all(30)),
