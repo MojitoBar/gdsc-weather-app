@@ -61,8 +61,23 @@ class _WeatherBodyState extends State<WeatherBody> {
     }
     return CupertinoPageScaffold(
       backgroundColor: getColor(data!.weather!.first.main!),
-      child: Center(
-        child: LocationText(data: data),
+      child: Column(
+        children: [
+          Center(
+            child: LocationText(data: data),
+          ),
+          Spacer(),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              margin: EdgeInsets.all(20),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("Week"),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
