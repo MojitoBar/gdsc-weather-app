@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:weather/WeatherBackgroundColor.dart';
 import 'package:weather/WeatherIcon.dart';
 import 'package:weather/data.dart';
+import 'package:weather/week.dart';
 
 void main() {
 // Json data 받아오기
@@ -72,7 +73,14 @@ class _WeatherBodyState extends State<WeatherBody> {
             child: Container(
               margin: EdgeInsets.all(20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Week(),
+                    ),
+                  );
+                },
                 child: Text("Week"),
               ),
             ),
