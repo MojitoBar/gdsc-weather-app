@@ -86,6 +86,20 @@ class _WeatherBodyState extends State<WeatherBody> {
       backgroundColor: getColor(data!.weather!.first.main!),
       child: Column(
         children: [
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              margin: EdgeInsets.fromLTRB(0, 60, 20, 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    fetchWeatherData();
+                  });
+                },
+                child: Text("Refresh"),
+              ),
+            ),
+          ),
           Center(
             child: LocationText(data: data),
           ),
@@ -126,7 +140,6 @@ class LocationText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(padding: EdgeInsets.all(30)),
         Text(
           "${data!.name.toString()}, ${data!.sys!.country}",
           style: TextStyle(
