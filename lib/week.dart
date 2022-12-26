@@ -5,8 +5,13 @@ class Week extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Week'),
+      ),
       backgroundColor: Colors.white,
-      child: Text("hello world"),
+      child: Center(
+        child: Text("test"),
+      ),
     );
   }
 }
