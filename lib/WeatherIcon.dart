@@ -1,3 +1,4 @@
 var WeatherIcon = {
-  "Clouds": "images/clouds.png",
+  "Clouds": "assets/images/clouds.png",
+  "Clear": "assets/images/clear.png",
 };

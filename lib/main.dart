@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 import 'package:weather/WeatherBackgroundColor.dart';
 import 'package:weather/WeatherIcon.dart';
 import 'package:weather/data.dart';
@@ -35,6 +36,26 @@ class WeatherBody extends StatefulWidget {
 
 class _WeatherBodyState extends State<WeatherBody> {
   WeatherData? data = null;
+
+  Future<void> fetchWeatherData() async {
+    var lat = 37.48752663774215;
+    var lon = 126.82578055762251;
+    var API_KEY = 'b719e4ef6551206d836fbb0812901195';
+    String url =
+        "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$API_KEY";
+
+    final response = await http.get(Uri.parse(url));
+
+    if (response.statusCode == 200) {
+      print("응답");
+      setState(() {
+        this.data = WeatherData.fromJson(json.decode(response.body));
+      });
+    } else {
+      throw Exception('API 호출 에러 발생');
+    }
+  }
+
   Future<void> getJson() async {
     final String response = await rootBundle.loadString('json/data.json');
     final data = await json.decode(response);
@@ -46,7 +67,8 @@ class _WeatherBodyState extends State<WeatherBody> {
   @override
   void initState() {
     super.initState();
-    getJson();
+    // getJson();
+    fetchWeatherData();
   }
 
   @override
@@ -161,7 +183,7 @@ class LocationText extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image(
-              image: AssetImage("images/wind.png"),
+              image: AssetImage("assets/images/wind.png"),
               width: 15,
             ),
             Padding(padding: EdgeInsets.all(3)),
