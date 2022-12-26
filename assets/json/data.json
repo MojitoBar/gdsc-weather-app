@@ -1,38 +1,281 @@
-{
-  "coord": { "lon": 126.8258, "lat": 37.4875 },
-  "weather": [
-    { "id": 800, "main": "Clear", "description": "clear sky", "icon": "01n" }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 266.76,
-    "feels_like": 266.76,
-    "temp_min": 262.9,
-    "temp_max": 268.93,
-    "pressure": 1028,
-    "humidity": 87,
-    "sea_level": 1028,
-    "grnd_level": 1023
+[
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
   },
-  "visibility": 10000,
-  "wind": { "speed": 0.99, "deg": 46, "gust": 1.01 },
-  "clouds": { "all": 5 },
-  "dt": 1672070666,
-  "sys": {
-    "type": 1,
-    "id": 8093,
-    "country": "KR",
-    "sunrise": 1672094754,
-    "sunset": 1672129253
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
   },
-  "timezone": 32400,
-  "id": 1948005,
-  "name": "Kwangmyŏng",
-  "cod": 200
-}
-
-
-{
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
+  },
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
+  },
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
+  },
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clouds",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 276.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
+  },
+  {
     "coord": {
       "lon": 126.8251,
       "lat": 37.4877
@@ -78,3 +321,4 @@
     "name": "Kwangmyŏng",
     "cod": 200
   }
+]

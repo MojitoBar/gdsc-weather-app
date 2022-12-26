@@ -83,23 +83,24 @@ class _WeatherBodyState extends State<WeatherBody> {
       );
     }
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text("weather"),
+        trailing: CupertinoButton(
+          padding: EdgeInsets.all(0),
+          child: Icon(
+            CupertinoIcons.refresh,
+          ),
+          onPressed: () {
+            setState(() {
+              fetchWeatherData();
+            });
+          },
+        ),
+      ),
       backgroundColor: getColor(data!.weather!.first.main!),
       child: Column(
         children: [
-          Align(
-            alignment: Alignment.topRight,
-            child: Container(
-              margin: EdgeInsets.fromLTRB(0, 60, 20, 20),
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    fetchWeatherData();
-                  });
-                },
-                child: Text("Refresh"),
-              ),
-            ),
-          ),
+          Padding(padding: EdgeInsets.all(90)),
           Center(
             child: LocationText(data: data),
           ),
