@@ -102,7 +102,7 @@ class _WeatherBodyState extends State<WeatherBody> {
         children: [
           Padding(padding: EdgeInsets.all(90)),
           Center(
-            child: LocationText(data: data),
+            child: WeatherContainer(data: data),
           ),
           Spacer(),
           Align(
@@ -132,10 +132,10 @@ Color getColor(String weather) {
   return WeatherBackgroundColor[weather]!;
 }
 
-class LocationText extends StatelessWidget {
+class WeatherContainer extends StatelessWidget {
   final WeatherData? data;
 
-  const LocationText({super.key, required this.data});
+  const WeatherContainer({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
