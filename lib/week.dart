@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,9 +15,7 @@ class Week extends StatefulWidget {
 
 class _WeekState extends State<Week> {
   List<WeatherData>? data = [];
-  List<String> date = [
-    'Mon',
-  ];
+  List<String> date = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   Future<void> getJson() async {
     final String response = await rootBundle.loadString('json/data.json');
@@ -60,7 +56,12 @@ class _WeekState extends State<Week> {
           children: [
             for (int i = 0; i < data!.length; i++)
               Container(
-                width: 50,
+                width: 60,
+                height: 180,
+                decoration: BoxDecoration(
+                  color: getColor(data![i].weather!.first.main.toString()),
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -70,6 +71,14 @@ class _WeekState extends State<Week> {
                       children: [
                         Column(
                           children: [
+                            Text(
+                              date[i],
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
                             Icon(
                               convertWeathertImg(
                                   data![i].weather!.first.main.toString()),
@@ -82,6 +91,34 @@ class _WeekState extends State<Week> {
                                 fontSize: 16,
                                 decoration: TextDecoration.none,
                               ),
+                            ),
+                            Padding(padding: EdgeInsets.all(12)),
+                            Text(
+                              "Wind",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 76, 76, 76),
+                                fontSize: 12,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  CupertinoIcons.wind,
+                                  size: 15,
+                                ),
+                                Padding(padding: EdgeInsets.all(3)),
+                                Text(
+                                  data![i].wind!.speed!.toStringAsFixed(0) +
+                                      "m/s",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 76, 76, 76),
+                                    fontSize: 11,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                )
+                              ],
                             ),
                           ],
                         ),
