@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
+
 var WeatherIcon = {
-  "Clouds": "assets/images/clouds.png",
-  "Clear": "assets/images/clear.png",
+  "Clouds": CupertinoIcons.cloud_sun,
+  "Clear": CupertinoIcons.sun_max,
 };

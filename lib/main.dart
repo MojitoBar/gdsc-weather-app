@@ -128,10 +128,6 @@ class _WeatherBodyState extends State<WeatherBody> {
   }
 }
 
-Color getColor(String weather) {
-  return WeatherBackgroundColor[weather]!;
-}
-
 class WeatherContainer extends StatelessWidget {
   final WeatherData? data;
 
@@ -159,11 +155,9 @@ class WeatherContainer extends StatelessWidget {
           ),
         ),
         Padding(padding: EdgeInsets.all(70)),
-        Image(
-          image: AssetImage(
-            convertWeathertImg(data!.weather!.first.main.toString()),
-          ),
-          width: 50,
+        Icon(
+          convertWeathertImg(data!.weather!.first.main.toString()),
+          size: 65,
         ),
         Padding(padding: EdgeInsets.all(15)),
         Text(
@@ -196,9 +190,9 @@ class WeatherContainer extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              image: AssetImage("assets/images/wind.png"),
-              width: 15,
+            Icon(
+              CupertinoIcons.wind,
+              size: 20,
             ),
             Padding(padding: EdgeInsets.all(3)),
             Text(
@@ -216,10 +210,14 @@ class WeatherContainer extends StatelessWidget {
   }
 }
 
+Color getColor(String weather) {
+  return WeatherBackgroundColor[weather]!;
+}
+
 String convertToCelsius(double kelvin) {
   return (kelvin - 273.15).toStringAsFixed(1) + "º";
 }
 
-String convertWeathertImg(String str) {
+IconData convertWeathertImg(String str) {
   return WeatherIcon[str]!;
 }
