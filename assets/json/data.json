@@ -14,7 +14,7 @@
     ],
     "base": "stations",
     "main": {
-      "temp": 276.85,
+      "temp": 273.85,
       "feels_like": 273.36,
       "temp_min": 274.9,
       "temp_max": 277.93,
@@ -25,7 +25,7 @@
     },
     "visibility": 10000,
     "wind": {
-      "speed": 4.08,
+      "speed": 2.08,
       "deg": 275,
       "gust": 8.27
     },
@@ -71,7 +71,7 @@
     },
     "visibility": 10000,
     "wind": {
-      "speed": 4.08,
+      "speed": 1.08,
       "deg": 275,
       "gust": 8.27
     },
@@ -106,7 +106,7 @@
     ],
     "base": "stations",
     "main": {
-      "temp": 276.85,
+      "temp": 278.85,
       "feels_like": 273.36,
       "temp_min": 274.9,
       "temp_max": 277.93,
@@ -117,7 +117,7 @@
     },
     "visibility": 10000,
     "wind": {
-      "speed": 4.08,
+      "speed": 1.08,
       "deg": 275,
       "gust": 8.27
     },
@@ -198,7 +198,7 @@
     ],
     "base": "stations",
     "main": {
-      "temp": 276.85,
+      "temp": 280.85,
       "feels_like": 273.36,
       "temp_min": 274.9,
       "temp_max": 277.93,
@@ -209,7 +209,7 @@
     },
     "visibility": 10000,
     "wind": {
-      "speed": 4.08,
+      "speed": 2.08,
       "deg": 275,
       "gust": 8.27
     },

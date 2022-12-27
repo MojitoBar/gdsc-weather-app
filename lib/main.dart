@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Week(),
+      home: WeatherBody(),
     );
   }
 }
@@ -51,6 +51,7 @@ class _WeatherBodyState extends State<WeatherBody> {
       setState(() {
         this.data = WeatherData.fromJson(json.decode(response.body));
       });
+      print(response.body);
     } else {
       throw Exception('API 호출 에러 발생');
     }
