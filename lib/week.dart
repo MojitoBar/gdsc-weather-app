@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ class Week extends StatefulWidget {
 
 class _WeekState extends State<Week> {
   List<WeatherData>? data = [];
+  List<String> date = [
+    'Mon',
+  ];
 
   Future<void> getJson() async {
     final String response = await rootBundle.loadString('json/data.json');
@@ -51,12 +55,42 @@ class _WeekState extends State<Week> {
       ),
       backgroundColor: Colors.white,
       child: Center(
-        child: Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             for (int i = 0; i < data!.length; i++)
-              Icon(
-                convertWeathertImg(data![i].weather!.first.main.toString()),
-              ),
+              Container(
+                width: 50,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            Icon(
+                              convertWeathertImg(
+                                  data![i].weather!.first.main.toString()),
+                              size: 40,
+                            ),
+                            Text(
+                              convertToCelsius(data![i].main!.temp!.toDouble()),
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Padding(padding: EdgeInsets.all(10)),
+                  ],
+                ),
+              )
           ],
         ),
       ),

@@ -53,7 +53,7 @@
     "weather": [
       {
         "id": 801,
-        "main": "Clouds",
+        "main": "Clear",
         "description": "few clouds",
         "icon": "02n"
       }
@@ -145,7 +145,53 @@
     "weather": [
       {
         "id": 801,
-        "main": "Clouds",
+        "main": "Snow",
+        "description": "few clouds",
+        "icon": "02n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 256.85,
+      "feels_like": 273.36,
+      "temp_min": 274.9,
+      "temp_max": 277.93,
+      "pressure": 1018,
+      "humidity": 53,
+      "sea_level": 1018,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.08,
+      "deg": 275,
+      "gust": 8.27
+    },
+    "clouds": {
+      "all": 21
+    },
+    "dt": 1670850445,
+    "sys": {
+      "type": 1,
+      "id": 8093,
+      "country": "KR",
+      "sunrise": 1670798260,
+      "sunset": 1670832895
+    },
+    "timezone": 32400,
+    "id": 1948005,
+    "name": "Kwangmyŏng",
+    "cod": 200
+  },
+  {
+    "coord": {
+      "lon": 126.8251,
+      "lat": 37.4877
+    },
+    "weather": [
+      {
+        "id": 801,
+        "main": "Clear",
         "description": "few clouds",
         "icon": "02n"
       }
@@ -237,60 +283,14 @@
     "weather": [
       {
         "id": 801,
-        "main": "Clouds",
+        "main": "Snow",
         "description": "few clouds",
         "icon": "02n"
       }
     ],
     "base": "stations",
     "main": {
-      "temp": 276.85,
-      "feels_like": 273.36,
-      "temp_min": 274.9,
-      "temp_max": 277.93,
-      "pressure": 1018,
-      "humidity": 53,
-      "sea_level": 1018,
-      "grnd_level": 1013
-    },
-    "visibility": 10000,
-    "wind": {
-      "speed": 4.08,
-      "deg": 275,
-      "gust": 8.27
-    },
-    "clouds": {
-      "all": 21
-    },
-    "dt": 1670850445,
-    "sys": {
-      "type": 1,
-      "id": 8093,
-      "country": "KR",
-      "sunrise": 1670798260,
-      "sunset": 1670832895
-    },
-    "timezone": 32400,
-    "id": 1948005,
-    "name": "Kwangmyŏng",
-    "cod": 200
-  },
-  {
-    "coord": {
-      "lon": 126.8251,
-      "lat": 37.4877
-    },
-    "weather": [
-      {
-        "id": 801,
-        "main": "Clouds",
-        "description": "few clouds",
-        "icon": "02n"
-      }
-    ],
-    "base": "stations",
-    "main": {
-      "temp": 276.85,
+      "temp": 252.85,
       "feels_like": 273.36,
       "temp_min": 274.9,
       "temp_max": 277.93,
